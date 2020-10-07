@@ -1,0 +1,50 @@
+import random
+#interesting interface
+print('+||||||||||||||||||||||||||||||||||||||+')
+print('{||||||||||||||||||||||||||||||||||||||}')
+print('{|||||||||MARLY\'S MAGIC 8 BALL|||||||||}')
+print('{||||||||||||||||||||||||||||||||||||||}')
+print('+||||||||||||||||||||||||||||||||||||||+\n')
+
+print('Ask a question:\n')
+print('(Type \'No\' if you don\'t want to ask a question.)')
+user_question = input()
+
+#create a list of responses
+# when the input isn't any variation of no, i want the loop to run
+# create random number generator
+#ask if they have another question after each response. 
+
+possible_responses = ['It is certain.', 
+'It is decidedly so.', 
+'Without a doubt.', 
+'Yes - definitely.', 
+'You may rely on it.', 
+'As I see it yes.', 
+'Most likely.', 
+'Outlook good.',
+'Yes.',
+'Signs point to yes.',
+'Reply hazy try again',
+'Ask again later.',
+'Better not tell you now.',
+'Cannot predict now.',
+'Concentrate and ask again.',
+'Don\'t count on it.',
+'My reply is no.',
+'My sources say no',
+'Outlook not so good.',
+'Very doubtful.']
+
+while not (user_question == 'no' or user_question == 'No' or user_question == 'NO'): 
+  random_num = random.randint(0, len(possible_responses)-1)  
+  #random num generator problem
+  print(possible_responses[random_num]) #access a random index each time
+  print('Do you have another question?')
+  
+    
+
+
+  user_question = input() 
+
+print('Goodbye')
